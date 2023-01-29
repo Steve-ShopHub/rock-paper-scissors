@@ -1,3 +1,331 @@
+// Check if prime
+
+
+let n = prompt('Enter number');
+
+for (i = 2; i < n; i++) {
+	if (n % i == 0) {
+		alert('Not a prime!');
+		break;
+	} alert(`${n} is a prime!`);
+	break;
+}
+
+
+/*
+
+let i = 1;
+let n = prompt('Enter number');
+
+do {
+	i++;
+	if (n % i == 0) {
+		alert('Not a prime!');
+		break;		
+	} console.log(i);
+	
+} while (i < n) 
+
+*/
+
+	// alert(`${n} is a prime!`)
+	// break;
+
+// 15 % 2 !== 0, so go to 3
+// 15 % 3 == 0, alert 'not a prime'
+
+
+/*
+
+do {
+	i++;
+	if (n % i == 0) {
+		alert('Not a prime!');
+		break;		
+	}
+	
+	console.log(i);
+} while (i < n-1)
+	
+	
+	// && (alert(`${n} is a prime!`) || true )) ;
+
+*/
+
+
+
+
+
+/*
+
+for (i = 2; i <= n; i++) {
+	if (n % i == 0)
+	break;
+	alert('not a prime');
+} 
+
+*/
+
+/*
+// Enter number 5
+// If 5/2
+
+// 1 2 3 4 5 6 7
+
+// Is 6 a prime?
+
+//6/2 = 3 X
+
+*/
+
+
+/*
+
+let n = prompt('Enter number');
+
+for (let i = 2; i <= n; i++) {
+	if (*******)
+	continue;
+	console.log(i);
+}
+
+*/
+
+
+// Can not be 
+
+
+
+
+
+
+/*
+
+let number = '';
+
+while (number <= 100) {
+  number = prompt('Enter number greater than 100');
+  if (number <= 100) {
+    alert('Incorrect');
+  }
+}
+alert('Correct');
+
+*/
+
+  
+
+/*
+
+let number = '';
+
+
+while (number <= 100) {
+	number = prompt('Enter number greater than 100');
+} 	alert('Correct');
+
+*/
+
+/*
+
+let number = '';
+
+do {
+	number = prompt('Enter number > 100');
+} 	while (number <= 100) {}
+*/
+
+/*
+
+let number = 0;
+
+while (number <= 100) {
+	prompt('Enter a number greater than 100', '');
+}
+
+
+if (number <= 100) {
+	alert('try again');
+	prompt('Enter a number greater than 100', '');
+}
+
+
+*/
+
+/*
+
+while (number <= 100) {
+	alert('try again');
+	number;
+}
+
+*/
+
+
+
+
+
+
+
+
+/*
+
+let i = 0;
+
+while (i < 3) {
+		alert(`number is ${i} !`);
+		i++;
+}
+
+*/
+
+
+
+/*
+for (let i = 2; i <= 10; i++) {
+	if (i%2 !== 0)
+		continue;
+		console.log(i);
+}
+*/
+
+/*
+
+//Create loop that skips all odd numbers
+
+
+
+for (let i = 0; i < 100; i++) {
+		if (i%2 !== 0)
+		continue;	
+	console.log(i);
+
+}
+
+*/
+
+/*
+
+
+let sum = 0;
+
+while (true) {
+
+  let value = + prompt("Enter a number", '');
+
+  if (!value) break; // (*)
+
+  sum += value;
+
+}
+alert( 'Sum: ' + sum );
+
+*/
+
+
+/*
+
+//forEach
+
+const numbers = [5, 10, 14];
+
+numbers.forEach((n, i) => {
+	console.log(n);
+	console.log(i);
+
+});
+
+*/
+
+/*
+
+// for...of
+
+const listItems = document.querySelectorAll('li');
+
+for (const li of listItems) {
+console.log(li);
+
+}
+
+*/
+
+
+
+/*
+
+//for...in
+
+const person = {
+    name: 'Steve',
+    age: '29',
+    occupation: 'Founder',
+    hair: {
+    	color: 'brown',
+    	length: 'medium'
+    }
+};
+
+for (const prop in person) {
+		console.log(person[prop]);
+		
+}
+
+*/
+
+
+/*
+
+//do while
+
+let i = 10;
+
+do {
+console.log(i)
+i--;
+
+} while (i < 10 && i > 0);
+
+
+*/
+
+
+/*
+
+//while
+
+let i = 0;
+
+while (i < 10) {
+    console.log(i);
+
+    i++;
+}
+
+*/
+
+/*
+
+for(let i = 0; i < 10; i++) {
+    if (i === 3) {
+        continue;
+    }
+ 
+    if (i === 7)
+        break;
+    console.log(i);
+}
+
+*/
+
+
+//this code
+
+
+
+
+
+/*
 
 function countdown(){
 for (i=10; i>0; i--) {
@@ -7,7 +335,7 @@ for (i=10; i>0; i--) {
 
 countdown()
 
-
+*/
 
 
 
