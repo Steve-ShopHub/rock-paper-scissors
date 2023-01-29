@@ -1,18 +1,160 @@
-const fruit = ['apple', 'pear', 'banana'];
 
-console.log(fruit[1]);
+function countdown(){
+for (i=10; i>0; i--) {
+    console.log(i);
+    }
+}
 
-alert('hello');
-
-
-
-
-
+countdown()
 
 
 
 
 
+
+
+/*
+
+const fruit = ['apple', 'pear', 'banana', 'orange', 'strawberry'];
+
+const pets = ['Jasper', 'Jacob', 'Shannon', 'Tramp'];
+
+
+function myFav(arrayName){
+    let sentence = 'My favourite pets are ';
+    for (i=0; i<arrayName.length-1; i++ ) {
+        sentence += arrayName[i] + ',' + ' ';
+    } sentence += 'and ' + arrayName[arrayName.length-1] + '!';
+    return sentence;
+
+}
+
+alert(myFav(pets));
+
+*/
+
+
+
+/*
+
+const fruit = ['apple', 'pear', 'banana', 'orange', 'strawberry'];
+
+const pets = ['Jasper', 'Jacob', 'Shannon', 'Tramp'];
+
+const myFavPets = 'My favourite pets are called ';
+
+let myFavList = myFavPets;
+
+
+for (i = 0; i < pets.length-1; i++) {
+    myFavList += pets[i] + ',' + ' ';
+ } 
+    
+myFavList += 'and ' + pets[pets.length-1] + '!';
+
+alert(myFavList);
+
+*/
+
+/*
+const pets = ['Jasper', 'Jacob', 'Shannon', 'Tramp'];
+
+
+function createSentence (arrayName) {
+    let myFavList = 'My favourite ' + arrayName + 'are';
+    for (i = 0; i < arrayName[arrayName.length-1]; i++) {
+        myFavList += arrayName[i] + ' ';
+    } myFavList += 'and' + arrayName[arrayName.length];
+}
+
+
+
+alert(createSentence(pets))
+
+*/
+
+/* I want to list my favourite cats in a sentence */
+
+
+/*
+function createArrayList(arrayName) {
+    let list = "<ul>" + "\n";
+    for (const i of fruit) {
+        list += "<li>" + arrayName[i] + "</li>" + "\n";
+        }
+    list += "</ul>";
+    console.log(list);
+}
+
+createArrayList(fruit);
+
+
+*/
+
+/*
+
+const cats = ['Leopard', 'Jaguar', 'Lion', 'Tiger'];
+
+
+const filtered = cats.filter(cat => cat.startsWith('L'));
+
+    
+console.log(filtered);
+
+alert(filtered);
+
+
+
+*/
+
+/* 
+for (let i=2; i<6; i++) {
+    let message = 'hello world';
+    message += " " + i 
+    console.log(message);
+}
+
+
+
+
+/*
+
+const fruit = ['apple', 'pear', 'banana', 'orange', 'strawberry'];
+
+
+function createArrayList(arrayName) {
+    let list = "<ul>" + "\n";
+    for (let i = 0; i < arrayName.length; i++) {
+        list += "<li>" + arrayName[i] + "</li>" + "\n";
+    }
+    list += "</ul>";
+    console.log(list);
+}
+
+let fruitSlice = fruit.slice(1);
+console.log(fruitSlice);
+
+fruit.pop(fruit);
+
+console.log(fruit);
+console.log(fruit.toString());
+console.log(fruit.join('\n' + 'parting' + '\n'));
+
+*/
+
+
+
+/*createArrayList(fruit);*/
+
+/* Create a function that turns array items into an <ul> 
+
+1) Create <ul>
+2) Create <li>, then add first array item, then add </li>
+3) On next line, add <li> with second array item, then add </li>
+4) Repeat until last array item is reached
+5) Close off with </ul>
+
+*/ 
 
 
 /*
