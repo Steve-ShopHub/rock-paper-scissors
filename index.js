@@ -1,5 +1,204 @@
-// Check if prime
+const convertToCelsius = function(fahrenheit) {
+    let celsius = ((fahrenheit - 32)*(5/9));
+    celsius = Math.round(celsius * 10) / 10;
+    return celsius;
+};
 
+const convertToFahrenheit = function(celsius) {
+    let fahrenheit = ((celsius * (9/5) + 32));
+    fahrenheit = Math.round(fahrenheit * 10) / 10;
+    return fahrenheit;
+    
+};
+
+console.log(convertToCelsius(32));
+console.log(convertToFahrenheit(0));
+console.log(convertToCelsius(100));
+console.log(convertToFahrenheit(73.2));
+
+/*
+
+const leapYears = function(year) {
+    if (year % 4 == 0 && (!(year % 100 == 0)) || (year % 400 == 0)) {
+        return true;
+    }  else return false;
+    
+};
+
+
+
+console.log(leapYears(1984)); // true
+console.log(leapYears(1983)); // false
+console.log(leapYears(1900)); // false
+console.log(leapYears(2000)); // true
+
+*/
+
+/*
+
+const leapYears = function(year) {
+
+if (!(year % 100 == 0 && year % 400 == 0)) {
+    return false;
+} else if (((year % 4 == 0)) || (year % 100 == 0)) {
+    return true;
+}
+};
+
+*/
+
+
+
+
+// !(year % 4 == 0) || (year % 100 == 0)
+
+// return true;
+// } else if (year % 100 == 0) {
+// return false;
+// } else return false;
+// };
+
+
+/*
+
+
+function sumAll (x, y) {
+    let sumList = 0;    
+    if (x < 0 || y < 0 ||(typeof(x) !== 'number') || (typeof(y) !== 'number')){
+        return 'ERROR';
+    }
+    if (x > y) {
+        for (let i = y; i <= x; i++){
+        sumList += i;        
+        }
+    } else for (let i = x; i <= y; i++){
+        sumList += i;       
+    }
+    return sumList;
+}
+
+console.log(sumAll(6, 5));
+
+
+*/
+
+/*
+function sum (x, y) {
+    let sumList = 0;    
+    if (y > x) {
+    for (let i = x; i <= y; i++){
+        sumList += i;        
+    }
+    return sumList;
+}
+}
+
+console.log(sum(1, 10));
+
+
+
+*/
+
+
+/*
+
+
+Implement a function that takes 2 integers and returns the sum of every number between(and including) them:
+
+```javascript
+sumAll(1, 4) // returns the sum of 1 + 2 + 3 + 4 which is 10
+```
+
+
+## Hints
+
+Think about how you would do this on pen and paper and then how you might translate that process into code:
+- make sure you pay attention to the function parameters
+- create a variable to hold the final sum
+- loop through the given numbers ([link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration))
+- on each iteration add the number to the sum
+- return the sum after finishing the loop
+
+
+*/
+
+/*
+
+const removeFromArray = (array, ...removeArg) => {
+    return array.filter(element => !removeArg.includes(element));
+};
+
+console.log(removeFromArray(['a', 'b', 2, 3, 4], 2, 'b'));
+
+*/
+
+
+/*
+
+const reverseString = function(string) {
+    const splitString = string.split('');        
+    const reversedStringArray = splitString.reverse();       
+    const reversedString = reversedStringArray.join("");
+    return reversedString;    
+};
+
+const reverseString = function(string) {
+    return string.split('').reverse().join();
+};
+
+*/
+
+// Split string characters into array using slice
+
+/*
+
+const string = 'hello-world !!';
+
+alert(string);
+
+const splitString = string.split('');
+
+alert(splitString);
+
+const reversedStringArray = splitString.reverse();
+
+alert(reversedStringArray);
+
+const reversedString = reversedStringArray.join("");
+
+alert(reversedString);
+
+
+*/
+
+
+// Pop letters of array into new array backwards (loop?)s
+
+
+/*
+
+
+const repeatString = function(string, num) {
+    for (let i = 0; i < num; i++){
+        let output = 
+        return string
+    }   
+    
+    
+};
+
+console.log(repeatString('hello', 5));
+
+*/
+
+
+// output = string + string + string + string + string + ... 
+
+
+//
+
+/*
+// Check if prime
 
 let n = prompt('Enter number');
 
@@ -11,6 +210,7 @@ for (i = 2; i < n; i++) {
 	break;
 }
 
+*/
 
 /*
 
