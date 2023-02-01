@@ -1,3 +1,9 @@
+/* #page {
+   
+   display: flex;
+   justify-content: center;
+} */
+
 #counter-container {
     display: flex;
     justify-content: center;
@@ -6,7 +12,8 @@
 
 .counter {
     width: 200px;
-    height: 200px;
+    min-height: 200px;
+    height: auto;
     border:  solid 2px black;
     margin-left: 100px;
     margin-right: 100px;
