@@ -8,10 +8,6 @@ function getComputerChoice () {
 };
 
 
-
-
-
-
 function playRound (){
     let computerSelection = getComputerChoice();
     let playerSelection = prompt('Rock, Paper, or Scissors').toLowerCase();
@@ -26,21 +22,18 @@ function playRound (){
 
 
 
-console.log(playRound());
-console.log(playRound());
-console.log(playRound());
-console.log(playRound());
 
-/*
+
 
 let rounds = prompt('How many rounds do you want to play?');
 
-function playGame (rounds){
-    for (i = 0; i < rounds; i++) {
+function playGame (){
+   for (i = 0; i < rounds; i++) {
         console.log(playRound());
     }
 }
 
-playGame(5);
+playGame();
 
-*/
+
+
