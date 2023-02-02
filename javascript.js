@@ -1,3 +1,9 @@
+//Add .win class toggle thing when count
+
+
+
+////////////////
+
 function getComputerChoice () {
 	let result = Math.floor(Math.random() * 3) + 1;
 	if (result == 1){
@@ -23,7 +29,7 @@ function playRound (){
 
 
 
-
+/*
 
 let rounds = prompt('How many rounds do you want to play?');
 
@@ -36,4 +42,4 @@ function playGame (){
 playGame();
 
 
-
+*/
