@@ -1,8 +1,12 @@
-/* #page {
-   
-   display: flex;
-   justify-content: center;
-} */
+#top {
+    display: flex;
+    min-height: 200px;
+}
+
+#bottom {
+    display: flex;
+    min-height: 200px;
+}
 
 #counter-container {
     display: flex;
@@ -21,3 +25,10 @@
 }
 
 .counter-title {}
+
+#container-two {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
