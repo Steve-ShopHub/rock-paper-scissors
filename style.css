@@ -28,7 +28,7 @@ body {
     min-width: 100px;
     min-height: 100px;
     height: auto;
-    margin: 50px;
+    margin: 25px;
     padding: 5px;
     padding-top: 20px;
 }
@@ -47,8 +47,8 @@ body {
 }
 
 .screen {
-    min-width: 200px;
-    min-height: auto;
+    min-width: 250px;
+    min-height: 250px;
 }
 
 .counter-container {
