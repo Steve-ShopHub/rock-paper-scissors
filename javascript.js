@@ -67,12 +67,14 @@ scissorsButton.addEventListener('click', playerPicksScissors);
 
 
 
+
 function playRound (){
     let computerSelection = getComputerChoice();
     if (playerSelection == computerSelection) {
         roundTally++;
         return `Draw! You both picked ${computerSelection}!`;
-    } else if ((playerSelection == 'rock' && computerSelection ==   'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
+    } else if 
+        ((playerSelection == 'rock' && computerSelection ==   'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
         roundTally++; winTally++;
         return `You win! Computer picked ${computerSelection}!`
     } else {
@@ -81,7 +83,62 @@ function playRound (){
 }
 };
 
-// Bug - only returning end ^^
+
+
+/*
+
+function playRound() {
+    const computerSelection = getComputerChoice();
+    switch (playerSelection) {
+      case computerSelection:
+        draw();
+        break;
+      case 'rock':
+        (computerSelection === 'scissors') ? win() : lose();
+        break;
+      case 'paper':
+        (computerSelection === 'rock') ? win() : lose();
+        break;
+      case 'scissors':
+        (computerSelection === 'paper') ? win() : lose();
+        break;
+    }
+  };
+
+  */
+
+
+/*
+
+function playRound(){
+    let computerSelection = getComputerChoice();
+    if (playerSelection == computerSelection) {
+        draw ();
+    } else if 
+    ((playerSelection == 'rock' && computerSelection ==   'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
+        win ();
+    } else { lose ();
+
+}
+};
+
+
+function draw(){
+    roundTally++;
+    return `Draw! You both picked ${computerSelection}!`;
+};
+
+function win () {
+    roundTally++; winTally++;
+    return `You win! Computer picked ${computerSelection}!`
+};
+
+function lose(){
+    roundTally++; loseTally++;
+    return `You lost! Computer picked ${computerSelection}!`
+}
+
+*/
 
 
 
@@ -102,6 +159,9 @@ loseTitle.appendChild(computerWinsText);
 
 
 
+
+
+// Loop to repeat prompt until correct entry
 
 /*
 
