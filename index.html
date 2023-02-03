@@ -9,21 +9,30 @@
 </head>
 <body>
 
-    <div id="counter-container">
+<div id="welcome">
+    <h1>Get ready to play Rock, Paper, Scissors!</h1>
+    <button id="start-button">Start</button>
+</div>
+
+<div id="main">
+
+    <div class="counter-container">
+        <h3 class="counter round">Round</h3>
+    </div>
+    <div class="counter-container">
         <h3 class="counter player-wins">Your wins</h3>
         <h3 class="counter draw">Draws</h3>
         <h3 class="counter computer-wins">Computer wins</h3>
-        <h3 class="counter round">Rounds played</h3>
     </div>
 
 
     <div id="game-display">
-        <div class="player screen">Player choice image
+        <div class="player screen">Your choice
             <img class="choice rock" src="img/rock.gif">
             <img class="choice paper" src="img/paper.gif">
             <img class="choice scissors" src="img/scissors.gif">
         </div>
-        <div class="computer screen">Computer choice image
+        <div class="computer screen">Computer choice
             <img class="choice rock" src="img/rock.gif">
             <img class="choice paper" src="img/paper.gif">
             <img class="choice scissors" src="img/scissors.gif">
@@ -31,19 +40,20 @@
         
     </div>
     
-<div id="button-container">
-    <button class="button rock">
-        <h5>Rock</h5>
-        <img class="button-image" src="img/rock.gif">
-    </button>
-    <button class="button paper">
-        <h5>Paper</h5>
-        <img class="button-image" src="img/paper.gif">
-    </button>
-    <button class="button scissors">
-        <h5>Scissors</h5>
-        <img class="button-image" src="img/scissors.gif">
-    </button>
+    <div id="button-container">
+        <button class="button rock">
+            <h5>Rock</h5>
+            <img class="button-image" src="img/rock.gif">
+        </button>
+        <button class="button paper">
+            <h5>Paper</h5>
+            <img class="button-image" src="img/paper.gif">
+        </button>
+        <button class="button scissors">
+            <h5>Scissors</h5>
+            <img class="button-image" src="img/scissors.gif">
+        </button>
+    </div>
 </div>
     
     <script src="javascript.js" defer></script>

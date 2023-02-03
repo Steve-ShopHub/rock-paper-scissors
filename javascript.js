@@ -5,6 +5,7 @@
 // Add images to game screen when clicked
 
 
+const startButton = document.querySelector('#welcome #start-button');
 
 const winTitle = document.querySelector('.counter.player-wins');
 const roundsTitle = document.querySelector('.counter.round');
@@ -22,6 +23,16 @@ let roundTally = 0;
 let loseTally = 0;
 let drawTally = 0;
 
+startButton.addEventListener('click', gameStart);
+
+
+
+function gameStart() {
+    const welcomePage =  document.querySelector('#welcome');
+    const mainPage =  document.querySelector('#main');
+    welcomePage.style.display = 'none';
+    mainPage.style.visibility = 'visible';
+}
 
 
 
@@ -41,9 +52,6 @@ function hideImg() {
     rockImgsComp.style.display = '';
     paperImgsComp.style.display = '';
     scissorsImgsComp.style.display = '';
-
-
-
 };
 
 
@@ -103,6 +111,7 @@ rockButton.addEventListener('click', playerPicksRock);
 paperButton.addEventListener('click', playerPicksPaper);
 scissorsButton.addEventListener('click', playerPicksScissors);
 
+const gameWin = 5;
 
 
 
@@ -117,9 +126,15 @@ function playRound (){
     } else if 
         ((playerSelection == 'rock' && computerSelection ==   'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
         roundTally++; winTally++;
+        if (winTally == gameWin) {
+            alert (`You won the game. You have reached ${gameWin} wins first!`);
+        };
         return `You win! Computer picked ${computerSelection}!`
     } else {
     roundTally++; loseTally++;
+    if (loseTally == gameWin) {
+        alert (`You lost the game. Computer has reached ${gameWin} wins first!`);
+    };
     return `You lost! Computer picked ${computerSelection}!`
 }
 };
