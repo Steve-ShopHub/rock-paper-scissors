@@ -15,16 +15,15 @@ let roundTally = 0;
 let loseTally = 0;
 
 
-let computerSelection;
-let playerSelection;
+
 
 
 
 function getComputerChoice () {
-	computerSelection = Math.floor(Math.random() * 3) + 1;
-	if (computerSelection == 1){
+	let result = Math.floor(Math.random() * 3) + 1;
+	if (result == 1){
         return 'rock';
-    } else if (computerSelection == 2){
+    } else if (result == 2){
         return 'paper';
     } else return 'scissors';
 };
@@ -36,7 +35,6 @@ function getComputerChoice () {
 
 function playerPicksRock (){
     playerSelection = 'rock';
-    getComputerChoice ();
     playRound();
     playerWinsText.textContent = winTally;
     roundTallyText.textContent = roundTally;
@@ -46,7 +44,6 @@ function playerPicksRock (){
 
 function playerPicksPaper (){
     playerSelection = 'paper';
-    getComputerChoice ();
     playRound();
     playerWinsText.textContent = winTally;
     roundTallyText.textContent = roundTally;
@@ -55,7 +52,6 @@ function playerPicksPaper (){
 
 function playerPicksScissors (){
     playerSelection = 'scissors';
-    getComputerChoice ();
     playRound();
     playerWinsText.textContent = winTally;
     roundTallyText.textContent = roundTally;
@@ -66,11 +62,17 @@ rockButton.addEventListener('click', playerPicksRock);
 paperButton.addEventListener('click', playerPicksPaper);
 scissorsButton.addEventListener('click', playerPicksScissors);
 
+
+
+
+
+
 function playRound (){
+    let computerSelection = getComputerChoice();
     if (playerSelection == computerSelection) {
         roundTally++;
         return `Draw! You both picked ${computerSelection}!`;
-    } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
+    } else if ((playerSelection == 'rock' && computerSelection ==   'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
         roundTally++; winTally++;
         return `You win! Computer picked ${computerSelection}!`
     } else {
@@ -80,6 +82,8 @@ function playRound (){
 };
 
 // Bug - only returning end ^^
+
+
 
 const playerWinsText = document.createElement('h2');
 playerWinsText.classList.add('player-wins-text');
