@@ -1,8 +1,15 @@
 //Add .win class toggle thing when count
 
+// Add funny sound when clicked
+
+// Add images to game screen when clicked
+
+
+
 const winTitle = document.querySelector('.counter.player-wins');
 const roundsTitle = document.querySelector('.counter.round');
 const loseTitle = document.querySelector('.counter.computer-wins');
+const drawTitle = document.querySelector('.counter.draw');
 
 const rockButton = document.querySelector('.button.rock');
 const paperButton = document.querySelector('.button.paper');
@@ -13,6 +20,7 @@ const scissorsButton = document.querySelector('.button.scissors');
 let winTally = 0;
 let roundTally = 0;
 let loseTally = 0;
+let drawTally = 0;
 
 
 
@@ -39,6 +47,7 @@ function playerPicksRock (){
     playerWinsText.textContent = winTally;
     roundTallyText.textContent = roundTally;
     computerWinsText.textContent = loseTally;
+    drawTallyText.textContent = drawTally;
 
 }
 
@@ -48,6 +57,7 @@ function playerPicksPaper (){
     playerWinsText.textContent = winTally;
     roundTallyText.textContent = roundTally;
     computerWinsText.textContent = loseTally;
+    drawTallyText.textContent = drawTally;
 }
 
 function playerPicksScissors (){
@@ -56,6 +66,7 @@ function playerPicksScissors (){
     playerWinsText.textContent = winTally;
     roundTallyText.textContent = roundTally;
     computerWinsText.textContent = loseTally;
+    drawTallyText.textContent = drawTally;
 }
 
 rockButton.addEventListener('click', playerPicksRock);
@@ -71,7 +82,7 @@ scissorsButton.addEventListener('click', playerPicksScissors);
 function playRound (){
     let computerSelection = getComputerChoice();
     if (playerSelection == computerSelection) {
-        roundTally++;
+        roundTally++; drawTally++;
         return `Draw! You both picked ${computerSelection}!`;
     } else if 
         ((playerSelection == 'rock' && computerSelection ==   'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
@@ -156,6 +167,11 @@ const computerWinsText = document.createElement('h2');
 computerWinsText.classList.add('computer-wins-text');
 computerWinsText.textContent = loseTally;
 loseTitle.appendChild(computerWinsText);
+
+const drawTallyText = document.createElement('h2');
+drawTallyText.classList.add('draw-tally-text');
+drawTallyText.textContent = drawTally;
+drawTitle.appendChild(drawTallyText);
 
 
 
