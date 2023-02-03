@@ -49,3 +49,28 @@ body {
 .counter.round {
     color: blue ;
 }
+
+
+.counter.player-wins {
+    color: green;
+}
+
+.counter.draw {
+    color: #ffc600;
+}
+
+.counter.computer-wins {
+    color: red;
+}
+
+
+
+.screen .choice {
+    width: 200px;
+    height: 200px;
+    display: none;
+
+
+}
+
+

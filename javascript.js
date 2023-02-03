@@ -25,48 +25,78 @@ let drawTally = 0;
 
 
 
+function hideImg() {
+    const rockImgs =  document.querySelector('.player.screen .choice.rock');
+    const paperImgs =  document.querySelector('.player.screen .choice.paper');
+    const scissorsImgs =  document.querySelector('.player.screen .choice.scissors');
+
+    rockImgs.style.display = '';
+    paperImgs.style.display = '';
+    scissorsImgs.style.display = '';
+
+    const rockImgsComp =  document.querySelector('.computer.screen .choice.rock');
+    const paperImgsComp =  document.querySelector('.computer.screen .choice.paper');
+    const scissorsImgsComp =  document.querySelector('.computer.screen .choice.scissors');
+
+    rockImgsComp.style.display = '';
+    paperImgsComp.style.display = '';
+    scissorsImgsComp.style.display = '';
+
+
+
+};
+
 
 
 function getComputerChoice () {
 	let result = Math.floor(Math.random() * 3) + 1;
 	if (result == 1){
+        document.querySelector('.computer .rock').style.display = 'block';
         return 'rock';
     } else if (result == 2){
+        document.querySelector('.computer .paper').style.display = 'block';
         return 'paper';
-    } else return 'scissors';
+    } else if (result == 3){
+        document.querySelector('.computer .scissors').style.display = 'block';
+}       return 'scissors';
 };
 
 
 
-
-
-
-function playerPicksRock (){
-    playerSelection = 'rock';
-    playRound();
+function updateTally () {
     playerWinsText.textContent = winTally;
     roundTallyText.textContent = roundTally;
     computerWinsText.textContent = loseTally;
     drawTallyText.textContent = drawTally;
+}
+
+
+function playerPicksRock (){
+    hideImg();
+    playerSelection = 'rock';
+    document.querySelector('.player .rock').style.display = 'block';
+    playRound();
+    updateTally();
+
 
 }
 
 function playerPicksPaper (){
+    hideImg();
     playerSelection = 'paper';
+    document.querySelector('.player .paper').style.display = 'block';
     playRound();
-    playerWinsText.textContent = winTally;
-    roundTallyText.textContent = roundTally;
-    computerWinsText.textContent = loseTally;
-    drawTallyText.textContent = drawTally;
+    updateTally();
+
 }
 
 function playerPicksScissors (){
+    hideImg();
     playerSelection = 'scissors';
+    document.querySelector('.player .scissors').style.display = 'block';
     playRound();
-    playerWinsText.textContent = winTally;
-    roundTallyText.textContent = roundTally;
-    computerWinsText.textContent = loseTally;
-    drawTallyText.textContent = drawTally;
+    updateTally();
+
 }
 
 rockButton.addEventListener('click', playerPicksRock);
@@ -173,6 +203,27 @@ drawTallyText.classList.add('draw-tally-text');
 drawTallyText.textContent = drawTally;
 drawTitle.appendChild(drawTallyText);
 
+
+
+/*
+
+// Choice images for game screen
+
+const rockChoiceImage = document.createElement('img');
+rockChoiceImage.src = "img/rock.gif"
+// Add size styles
+
+const paperChoiceImage = document.createElement('img');
+paperChoiceImage.src = "img/paper.gif";
+
+const scissorsChoiceImage = document.createElement('img');
+paperChoiceImage.src = "img/scissors.gif";
+
+
+let playerChoiceScreen = document.querySelector('.player.screen');
+let computerChoiceScreen = document.querySelector('.computer.screen');
+
+*/
 
 
 
